@@ -11,18 +11,17 @@ sh "ls -l"
 
 stage('Build docker image'){
 
-sh "docker build -t docker_test:latest ."
+sh "docker build -t devopsexam:latest ."
 }
 
 stage('Docker login to hub and push the image'){
 sh "docker login -u 'mbugz1000' -p 'MbugzT@yahoo' "
-sh "docker tag docker_test:latest botieno5/docker_test:latest"
-sh "docker push botieno5/docker_test:latest"
+sh "docker tag devopsexam:latest  mbugz1000/devopsexam:latest"
+sh "docker push mbugz1000/devopsexam:latest"
 }
 
-stage('Apply changes to the environment') {
-sh "ls -l"
+stage('Docker run the Image'){
+sh "docker container run --detach --publish 80:7120 --name simplesite mbugz1000/devopsexam:latest"
 }
-
 
 }
