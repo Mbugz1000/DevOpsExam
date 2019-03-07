@@ -1,0 +1,44 @@
+html{
+  margin: 0;
+  padding: 0;
+  background: url("https://images.pexels.com/photos/326281/pexels-photo-326281.jpeg?cs=srgb&dl=appetizer-background-cuisine-326281.jpg&fm=jpg") no-repeat center fixed;
+  background-size: cover;
+}
+#PhotoFlexBox{
+  display: flex;
+  overflow: auto;
+  white-space: nowrap;
+}
+.FoodItem{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+h1{
+  text-align: center;
+  color: white;
+}
+h2{
+  text-align: center;
+}
+#descriptionAndMenu{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(232, 235, 239,0.3);
+  width: 60%;
+}
+main{
+  display: flex;
+  margin: 10px;
+}
+#ReviewsSection{
+  padding: 10px;
+  background-color: rgba(232, 235, 239,0.3);
+  margin-right: 10px;
+  width: 40%;
+  overflow: auto;
+  height: 500px;
+}
+.ImageName{
+  white-space: normal;
+}
