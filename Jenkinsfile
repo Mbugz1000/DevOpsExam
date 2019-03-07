@@ -5,10 +5,6 @@ stage('Clone Repository')
 checkout scm
 }
 
-stage('Show me the files'){
-sh "ls -l"
-}
-
 stage('Build docker image'){
 
 sh "docker build -t devopsexam:latest ."
@@ -21,7 +17,7 @@ sh "docker push mbugz1000/devopsexam:latest"
 }
 
 stage('Docker run the Image'){
-sh "docker container run --detach --publish 80:7120 --name simplesite mbugz1000/devopsexam:latest"
+sh "docker container run --detach --publish 80:7120 --name simplesite mbugz1000/devopsexam:latest" 	
 }
 
 }
